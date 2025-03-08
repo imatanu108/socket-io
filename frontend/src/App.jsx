@@ -20,7 +20,7 @@ function App() {
     socket.on("chat", (payload) => {
       setChat([...chat, payload])
     })
-  })
+  }, [])
 
   return (
     <>
