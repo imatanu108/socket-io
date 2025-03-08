@@ -18,7 +18,7 @@ function App() {
 
   useEffect(() => {
     socket.on("chat", (payload) => {
-      setChat([...chat, payload])
+      setChat((prevChat) => [...prevChat, payload])
     })
   }, [])
 
